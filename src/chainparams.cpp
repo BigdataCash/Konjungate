@@ -64,9 +64,9 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 262800; // one year
+        consensus.nSubsidyHalvingInterval = ‭525600‬; // one year
         consensus.nMasternodePaymentsStartBlock = 1; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
-        consensus.nFounderPaymentsStartBlock = 166500;
+        consensus.nFounderPaymentsStartBlock = 1;
         consensus.nPrivatesendForkBlock = 165000;
         consensus.nMasternodePaymentsIncreaseBlock = 158000; // not used
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // not used
@@ -87,7 +87,7 @@ public:
         consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8"); // FIX
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
         consensus.nPowTargetTimespan = 60 * 60; // Konjungate: 1 hour, 20 blocks
-        consensus.nPowTargetSpacing = 3 * 60; // Konjungate: 180 seconds
+        consensus.nPowTargetSpacing = 1 * 60; // Konjungate: 60 seconds
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -172,7 +172,7 @@ class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
         strNetworkID = "test";
-        consensus.nSubsidyHalvingInterval = 262800;
+        consensus.nSubsidyHalvingInterval = 150;
         consensus.nMasternodePaymentsStartBlock = 300; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
         consensus.nMasternodePaymentsIncreaseBlock = 158000;
         consensus.nMasternodePaymentsIncreasePeriod = 576*30;

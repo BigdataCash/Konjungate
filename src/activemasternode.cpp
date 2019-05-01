@@ -210,7 +210,7 @@ void CActiveMasternode::ManageStateInitial()
         return;
     }
 
-    if(pwalletMain->GetBalance() < 50000*COIN) {
+    if(pwalletMain->GetBalance() < 600000*COIN) {
         LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 50000 KONJ\n", GetStateString());
         return;
     }

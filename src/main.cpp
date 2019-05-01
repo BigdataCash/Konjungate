@@ -1745,14 +1745,14 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
   CAmount nSubsidy;
   //Premine code
     if (nPrevHeight == 1) {
-        return 714850 * COIN;
+        return ‭262500000‬ * COIN;
     }
     else{
-     nSubsidy = 10 * COIN;
+     nSubsidy = 1000 * COIN;
 
       // yearly decline of production by ~8.333% per year until reached max coin ~31M.
       for (int i = consensusParams.nSubsidyHalvingInterval; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) {
-          nSubsidy -= nSubsidy/7;
+          nSubsidy -= nSubsidy/11;
       }
     }
 
@@ -1763,7 +1763,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    return blockValue * 0.7;
+    return blockValue * 0.65;
 }
 
 bool IsMasternodeCollateral(CAmount value)

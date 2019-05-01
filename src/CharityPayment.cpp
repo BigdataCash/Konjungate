@@ -4,50 +4,50 @@
  * Distributed under the MIT software license, see the accompanying
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.
  *
- * FounderPayment.cpp
+ * CharityPayment.cpp
  *
  *  Created on: Jun 24, 2018
  *      Author: Tri Nguyen
  */
 
-#include "FounderPayment.h"
+#include "CharityPayment.h"
 //#include "standard.h";
 #include "util.h"
 #include "chainparams.h"
 #include <boost/foreach.hpp>
 
-CAmount FounderPayment::getFounderPaymentAmount(int blockHeight, CAmount blockReward) {
+CAmount CharityPayment::getCharityPaymentAmount(int blockHeight, CAmount blockReward) {
 	 if (blockHeight < 1){
 		 return 0;
 	 }
 	 return blockReward * 0.25;
 }
 
-void FounderPayment::FillFounderPayment(CMutableTransaction& txNew, int nBlockHeight, CAmount blockReward, CTxOut& txoutFounderRet) {
+void CharityPayment::FillCharityPayment(CMutableTransaction& txNew, int nBlockHeight, CAmount blockReward, CTxOut& txoutCharityRet) {
     // make sure it's not filled yet
-	txoutFounderRet = CTxOut();
+	txoutCharityRet = CTxOut();
 
     CScript payee;
-    // fill payee with the founder address
-    payee = GetScriptForDestination(founderAddress.Get());
+    // fill payee with the charity address
+    payee = GetScriptForDestination(charityAddress.Get());
 
     // GET FOUNDER PAYMENT VARIABLES SETUP
-    CAmount founderPayment = getFounderPaymentAmount(nBlockHeight, blockReward);
+    CAmount charityPayment = getCharityPaymentAmount(nBlockHeight, blockReward);
     // split reward between miner ...
-    txNew.vout[0].nValue -= founderPayment;
+    txNew.vout[0].nValue -= charityPayment;
     // ... and masternode
-    txoutFounderRet = CTxOut(founderPayment, payee);
-    txNew.vout.push_back(txoutFounderRet);
-    LogPrintf("CMasternodePayments::FillFounderPayment -- Founder payment %lld to %s\n", founderPayment, founderAddress.ToString());
+    txoutCharityRet = CTxOut(charityPayment, payee);
+    txNew.vout.push_back(txoutCharityRet);
+    LogPrintf("CMasternodePayments::FillCharityPayment -- Charity payment %lld to %s\n", charityPayment, charityAddress.ToString());
 }
 
-bool FounderPayment::IsBlockPayeeValid(const CTransaction& txNew, const int height, const CAmount blockReward) {
+bool CharityPayment::IsBlockPayeeValid(const CTransaction& txNew, const int height, const CAmount blockReward) {
 	CScript payee;
-	// fill payee with the founder address
-	payee = GetScriptForDestination(founderAddress.Get());
-	CAmount founderReward = getFounderPaymentAmount(height, blockReward);
+	// fill payee with the charity address
+	payee = GetScriptForDestination(charityAddress.Get());
+	CAmount charityReward = getCharityPaymentAmount(height, blockReward);
 	BOOST_FOREACH(const CTxOut& out, txNew.vout) {
-		if(out.scriptPubKey == payee && out.nValue >= founderReward) {
+		if(out.scriptPubKey == payee && out.nValue >= charityReward) {
 			return true;
 		}
 	}

@@ -4,7 +4,7 @@
  * Distributed under the MIT software license, see the accompanying
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.
  *
- * FounderPayment.h
+ * CharityPayment.h
  *
  *  Created on: Jun 24, 2018
  *      Author: Tri Nguyen
@@ -20,17 +20,17 @@ using namespace std;
 
 static const char* DEFAULT_FOUNDER_ADDRESS = "";
 
-class FounderPayment {
+class CharityPayment {
 public:
-	FounderPayment(const char* address = DEFAULT_FOUNDER_ADDRESS) {
-		founderAddress.SetString(address);
+	CharityPayment(const char* address = DEFAULT_FOUNDER_ADDRESS) {
+		charityAddress.SetString(address);
 	}
-	~FounderPayment(){};
-	CAmount getFounderPaymentAmount(int blockHeight, CAmount blockReward);
-	void FillFounderPayment(CMutableTransaction& txNew, int nBlockHeight, CAmount blockReward, CTxOut& txoutFounderRet);
+	~CharityPayment(){};
+	CAmount getCharityPaymentAmount(int blockHeight, CAmount blockReward);
+	void FillCharityPayment(CMutableTransaction& txNew, int nBlockHeight, CAmount blockReward, CTxOut& txoutCharityRet);
 	bool IsBlockPayeeValid(const CTransaction& txNew, const int height, const CAmount blockReward);
 private:
-	CBitcoinAddress founderAddress;
+	CBitcoinAddress charityAddress;
 };
 
 

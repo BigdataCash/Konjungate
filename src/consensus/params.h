@@ -56,7 +56,7 @@ struct Params {
     int nMajorityWindow;
     /** Block height and hash at which BIP34 becomes active */
     int BIP34Height;
-    int nFounderPaymentsStartBlock;
+    int nCharityPaymentsStartBlock;
     int nPrivatesendForkBlock;
     uint256 BIP34Hash;
     /**

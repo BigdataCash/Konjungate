@@ -64,7 +64,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = ‭525600; // one year
+        consensus.nSubsidyHalvingInterval = 525600; // one year
         consensus.nMasternodePaymentsStartBlock = 1; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
         consensus.nCharityPaymentsStartBlock = 1;
         consensus.nPrivatesendForkBlock = 165000;

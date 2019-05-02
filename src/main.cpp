@@ -1745,7 +1745,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
   CAmount nSubsidy;
   //Premine code
     if (nPrevHeight == 1) {
-        nSubsidy = ‭262500000‬ * COIN;
+        nSubsidy = 262500000 * COIN;
     }
     else{
      nSubsidy = 1000 * COIN;

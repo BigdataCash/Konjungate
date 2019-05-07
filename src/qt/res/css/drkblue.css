@@ -32,7 +32,7 @@ background-color:#fff;
 }
 
 QMenuBar::item:selected {
-background-color:#f8f6f6;
+background: transparent;
 }
 
 QMenu {
@@ -65,8 +65,8 @@ color:#fff;
 }
 
 QToolBar > QToolButton:checked {
-background-color:#fff;
-color:#333;
+background: transparent;
+color:#fc9b1e;
 font-weight:bold;
 }
 

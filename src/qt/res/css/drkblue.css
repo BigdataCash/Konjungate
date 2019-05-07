@@ -1,11 +1,11 @@
 /* Colors
 #fc9005 background-color
-#a529a5 line-edit
+#683b01 line-edit
 #fc9b1e pushbtn1
 #fc9005 pushbtn2
-#d121d1 pushbtn 3
-#a529a5 dropdown menus
-#b51eb5 some extra colors
+#fc9b1e pushbtn 3
+#683b01 dropdown menus
+#fc920b some extra colors
 */
 WalletFrame {
 border-image: url(':/images/drkblue/drkblue_walletFrame_bg') 0 0 0 0 stretch stretch;
@@ -91,7 +91,7 @@ background-color:transparent;
 }
 
 .QValidatedLineEdit, .QLineEdit { /* Text Entry Fields */
-border: 1px solid #a529a5;
+border: 1px solid #683b01;
 font-size:11px;
 min-height:25px;
 outline:0;
@@ -110,7 +110,7 @@ background-color:#f2f2f2;
 /*******************************************************/
 
 QPushButton { /* Global Button Style */
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #fc9b1e, stop: .1 #fc9005, stop: .95 #fc9005, stop: 1 #d121d1);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #fc9b1e, stop: .1 #fc9005, stop: .95 #fc9005, stop: 1 #fc9b1e);
 border:0;
 border-radius:3px;
 color:#ffffff;
@@ -123,7 +123,7 @@ padding-bottom:5px;
 }
 
 QPushButton:hover {
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #fc9b1e, stop: .1 #fc0707, stop: .95 #fc0707, stop: 1 #d121d1);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #fc9b1e, stop: .1 #fc0707, stop: .95 #fc0707, stop: 1 #fc9b1e);
 }
 
 QPushButton:focus {
@@ -136,7 +136,7 @@ border:1px solid #333;
 }
 
 QComboBox { /* Dropdown Menus */
-border:1px solid #a529a5;
+border:1px solid #683b01;
 padding: 3px 5px 3px 5px;
 background:#fcfcfc;
 min-height:25px;
@@ -192,7 +192,7 @@ selection-color:transparent;
 }
 
 QAbstractSpinBox {
-border:1px solid #a529a5;
+border:1px solid #683b01;
 padding: 3px 5px 3px 5px;
 background:#fcfcfc;
 min-height:25px;
@@ -205,8 +205,8 @@ subcontrol-position: top right;
 width:21px;
 background:#fcfcfc;
 border-left:0px;
-border-right:1px solid #a529a5;
-border-top:1px solid #a529a5;
+border-right:1px solid #683b01;
+border-top:1px solid #683b01;
 border-bottom:0px;
 padding-right:1px;
 padding-left:5px;
@@ -224,8 +224,8 @@ width:21px;
 background:#fcfcfc;
 border-top:0px;
 border-left:0px;
-border-right:1px solid #a529a5;
-border-bottom:1px solid #a529a5;
+border-right:1px solid #683b01;
+border-bottom:1px solid #683b01;
 padding-right:1px;
 padding-left:5px;
 padding-bottom:2px;
@@ -284,7 +284,7 @@ background-color:transparent;
 
 QHeaderView::section { /* Table Header Sections */
 qproperty-alignment:center;
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #b51eb5, stop: 1 #032447);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #fc920b, stop: 1 #032447);
 color:#fff;
 min-height:25px;
 font-weight:bold;
@@ -509,7 +509,7 @@ padding-right:10px;
 }
 
 QDialog#SignVerifyMessageDialog QPlainTextEdit { /* Message Signing Text */
-border:1px solid #a529a5;
+border:1px solid #683b01;
 background-color:#fff;
 }
 
@@ -815,7 +815,7 @@ margin-left:16px;
 QWidget .QFrame#frame .QLabel#labelBalanceText { /* Available Balance Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
-background-color:#032447;
+background-color:#000;
 color:#ffffff;
 margin-right:5px;
 padding-right:5px;
@@ -828,7 +828,7 @@ QWidget .QFrame#frame .QLabel#labelBalance { /* Available Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 font-weight:bold;
-color:#032447;
+color:#fc9b1e;
 margin-left:0px;
 }
 
@@ -842,7 +842,7 @@ QWidget .QFrame#frame .QLabel#labelPendingText { /* Pending Balance Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 font-size:12px;
-background-color:#F8F6F6;
+background: transparent;
 margin-right:5px;
 padding-right:5px;
 }
@@ -884,7 +884,7 @@ QWidget .QFrame#frame .QLabel#labelTotalText { /* Total Balance Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 font-size:12px;
-background-color:#F8F6F6;
+background: transparent;
 margin-right:5px;
 padding-right:5px;
 }
@@ -918,7 +918,7 @@ min-width: 421px;
 QWidget .QFrame#framePrivateSend .QLabel#labelPrivateSendHeader { /* PrivateSend Header */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
-background-color:#032447;
+background: transparent;
 color:#fff;
 margin-right:5px;
 padding-right:5px;

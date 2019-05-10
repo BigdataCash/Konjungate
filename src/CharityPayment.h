@@ -10,19 +10,19 @@
  *      Author: Tri Nguyen
  */
 
-#ifndef SRC_FOUNDERPAYMENT_H_
-#define SRC_FOUNDERPAYMENT_H_
+#ifndef SRC_CHARITYPAYMENT_H_
+#define SRC_CHARITYPAYMENT_H_
 #include <string>
 #include "amount.h"
 #include "primitives/transaction.h"
 #include "base58.h"
 using namespace std;
 
-static const char* DEFAULT_FOUNDER_ADDRESS = "";
+static const char* DEFAULT_CHARITY_ADDRESS = "";
 
 class CharityPayment {
 public:
-	CharityPayment(const char* address = DEFAULT_FOUNDER_ADDRESS) {
+	CharityPayment(const char* address = DEFAULT_CHARITY_ADDRESS) {
 		charityAddress.SetString(address);
 	}
 	~CharityPayment(){};
@@ -35,4 +35,4 @@ private:
 
 
 
-#endif /* SRC_FOUNDERPAYMENT_H_ */
+#endif /* SRC_CHARITYPAYMENT_H_ */

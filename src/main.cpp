@@ -3755,7 +3755,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, int prevBlockHeigh
                 tx.GetHash().ToString(),
                 FormatStateMessage(state));
               }
-                if(sporkManager.IsSporkActive(SPORK_15_FOUNDER_PAYMENT_ENFORCEMENT)
+                if(sporkManager.IsSporkActive(SPORK_15_CHARITY_PAYMENT_ENFORCEMENT)
                    && (prevBlockHeight + 1 > Params().GetConsensus().nCharityPaymentsStartBlock)) {
                 //	printf("charity block %d=%lld", prevBlockHeight);
                 	if(charityPayment.IsBlockPayeeValid(tx,prevBlockHeight+1,blockReward)) {

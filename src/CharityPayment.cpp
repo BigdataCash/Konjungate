@@ -31,7 +31,7 @@ void CharityPayment::FillCharityPayment(CMutableTransaction& txNew, int nBlockHe
     // fill payee with the charity address
     payee = GetScriptForDestination(charityAddress.Get());
 
-    // GET FOUNDER PAYMENT VARIABLES SETUP
+    // GET CHARITY PAYMENT VARIABLES SETUP
     CAmount charityPayment = getCharityPaymentAmount(nBlockHeight, blockReward);
     // split reward between miner ...
     txNew.vout[0].nValue -= charityPayment;

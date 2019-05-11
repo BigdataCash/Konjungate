@@ -111,7 +111,7 @@ public:
         pchMessageStart[2] = 0xc3;
         pchMessageStart[3] = 0xd4;
         vAlertPubKey = ParseHex("047555dd6f4137f0ebe725535eca0ef48d8b1c4d94c5b150e0f491277aac0a0f3d7ea14b6a0b96545814cc74850ce738af0262b84b8f42fbb63782cd5fd5200325");
-        nDefaultPort = 5677;
+        nDefaultPort = 5688;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
@@ -123,7 +123,13 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("", ""));
+        vSeeds.push_back(CDNSSeedData("37.187.180.53", "37.187.180.53"));
+        vSeeds.push_back(CDNSSeedData("51.38.113.123", "51.38.113.123"));
+        vSeeds.push_back(CDNSSeedData("167.114.115.58", "167.114.115.58"));
+        vSeeds.push_back(CDNSSeedData("167.114.115.59", "167.114.115.59"));
+        vSeeds.push_back(CDNSSeedData("37.59.124.3", "37.59.124.3"));
+    //  vSeeds.push_back(CDNSSeedData("", ""));
+    //  vSeeds.push_back(CDNSSeedData("", ""));
 
         // Konjungate addresses start with 'K'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,46);

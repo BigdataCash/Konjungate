@@ -793,7 +793,7 @@ QWidget .QFrame#frame .QLabel#label_5 { /* Wallet Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 background-color:transparent;
-color:#fff;
+color:#fc9005;
 margin-right:5px;
 padding-right:5px;
 }
@@ -868,7 +868,7 @@ QWidget .QFrame#frame .QLabel#labelImmatureText { /* Immature Balance Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
 font-size:12px;
-background-color:#F8F6F6;
+background: transparent;
 margin-right:5px;
 padding-right:5px;
 }

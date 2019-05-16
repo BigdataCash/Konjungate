@@ -643,7 +643,6 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
    result.push_back(Pair("charity_payments_started", pindexPrev->nHeight + 1 > Params().GetConsensus().nCharityPaymentsStartBlock));
    result.push_back(Pair("charity_payments_enforced", sporkManager.IsSporkActive(SPORK_15_CHARITY_PAYMENT_ENFORCEMENT)));
 
-
     UniValue superblockObjArray(UniValue::VARR);
     if(pblock->voutSuperblock.size()) {
         BOOST_FOREACH (const CTxOut& txout, pblock->voutSuperblock) {

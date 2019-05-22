@@ -14,7 +14,7 @@ windows=true
 osx=true
 
 # Other Basic variables
-SIGNER=akshaynexus
+SIGNER=CircuitBreakernexus
 VERSION=
 commit=HEAD
 url=https://github.com/Bitcoin-Monster/BTCMonster

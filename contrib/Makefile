@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = konjungate-qt1.0.0
-DISTDIR = /Users/akshay/Documents/BTCMonster/contrib/.tmp/konjungate-qt1.0.0
+DISTDIR = /Users/CircuitBreaker/Documents/BTCMonster/contrib/.tmp/konjungate-qt1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -headerpad_max_install_names -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -mmacosx-version-min=10.7
 LIBS          = $(SUBLIBS) -F/usr/local/Cellar/qt@5.5/5.5.1_1/lib -framework QtGui -framework QtCore -framework DiskArbitration -framework IOKit -framework OpenGL -framework AGL 

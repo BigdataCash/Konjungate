@@ -10,11 +10,11 @@ SetCompressor /SOLID lzma
 !define URL https://www.konjungate.org/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/Users/akshay/Documents/BTCMonster/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/Users/akshay/Documents/BTCMonster/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/Users/CircuitBreaker/Documents/BTCMonster/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/Users/CircuitBreaker/Documents/BTCMonster/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/Users/akshay/Documents/BTCMonster/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/Users/CircuitBreaker/Documents/BTCMonster/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,7 +22,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "Konjungate Core"
 !define MUI_FINISHPAGE_RUN $INSTDIR\konjungate-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/Users/akshay/Documents/BTCMonster/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/Users/CircuitBreaker/Documents/BTCMonster/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,7 +48,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /Users/akshay/Documents/BTCMonster/konjungatecore-${VERSION}-win-setup.exe
+OutFile /Users/CircuitBreaker/Documents/BTCMonster/konjungatecore-${VERSION}-win-setup.exe
 !if "" == "64"
 InstallDir $PROGRAMFILES64\BanqCore
 !else
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /Users/akshay/Documents/BTCMonster/release/konjungate-qt.exe
-    File /oname=COPYING.txt /Users/akshay/Documents/BTCMonster/COPYING
-    File /oname=readme.txt /Users/akshay/Documents/BTCMonster/doc/README_windows.txt
+    File /Users/CircuitBreaker/Documents/BTCMonster/release/konjungate-qt.exe
+    File /oname=COPYING.txt /Users/CircuitBreaker/Documents/BTCMonster/COPYING
+    File /oname=readme.txt /Users/CircuitBreaker/Documents/BTCMonster/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /Users/akshay/Documents/BTCMonster/release/konjungated.exe
-    File /Users/akshay/Documents/BTCMonster/release/konjungate-cli.exe
+    File /Users/CircuitBreaker/Documents/BTCMonster/release/konjungated.exe
+    File /Users/CircuitBreaker/Documents/BTCMonster/release/konjungate-cli.exe
     SetOutPath $INSTDIR\doc
-    File /r /Users/akshay/Documents/BTCMonster/doc\*.*
+    File /r /Users/CircuitBreaker/Documents/BTCMonster/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 

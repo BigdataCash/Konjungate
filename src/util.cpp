@@ -652,6 +652,40 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     ClearDatadirCache();
 }
 
+string randomStrGen(int length) {
+    static string charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    string result;
+    result.resize(length);
+    for (int32_t i = 0; i < length; i++)
+        result[i] = charset[rand() % charset.length()];
+
+    return result;
+}
+
+
+void createConf()       //Automatic .conf generation
+{
+    srand(time(NULL));
+
+    ofstream pConf;
+    pConf.open(GetConfigFile().generic_string().c_str());
+    const char* nodes = "\nport=14520"
+                        "\nrpcallowip=127.0.0.1"
+                        "\nlisten=1"
+                        "\nlogtimestamps=1"
+                        "\nmaxconnections=256"
+                        "\ndaemon=1"
+                        "\nserver=1"
+                        "\naddnode=207.148.30.107";
+
+    pConf   << std::string("rpcuser=")
+            +  randomStrGen(10)
+            + std::string("\nrpcpassword=")
+            + randomStrGen(15)
+            + std::string(nodes);
+    pConf.close();
+}
+
 #ifndef WIN32
 boost::filesystem::path GetPidFile()
 {
@@ -948,4 +982,3 @@ int GetNumCores()
     return boost::thread::hardware_concurrency();
 #endif
 }
-

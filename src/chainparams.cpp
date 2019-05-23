@@ -146,7 +146,7 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
@@ -159,8 +159,9 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (   0, uint256S("00000927435496954fcf6314b8d7ba4a0ec4a2cf37964bfa734fb6348359ed92")),
-            1520939400, // * UNIX timestamp of last checkpoint block
+            (   0, uint256S("00000927435496954fcf6314b8d7ba4a0ec4a2cf37964bfa734fb6348359ed92"))
+            (1000, uint256S("00000001d27eba2dbe4aaf995bd405cee9122b638e94b26277e5eff843a50e33")),
+            1558645274, // * UNIX timestamp of last checkpoint block
             0,   // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             500        // * estimated number of transactions per day after checkpoint

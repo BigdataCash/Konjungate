@@ -128,7 +128,7 @@ public:
         vSeeds.push_back(CDNSSeedData("167.114.115.58", "167.114.115.58"));
         vSeeds.push_back(CDNSSeedData("167.114.115.59", "167.114.115.59"));
         vSeeds.push_back(CDNSSeedData("37.59.124.3", "37.59.124.3"));
-    //  vSeeds.push_back(CDNSSeedData("", ""));
+        vSeeds.push_back(CDNSSeedData("77.78.204.210", "77.78.204.210"));
     //  vSeeds.push_back(CDNSSeedData("", ""));
 
         // Konjungate addresses start with 'K'
@@ -146,7 +146,7 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = false;
+        fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;

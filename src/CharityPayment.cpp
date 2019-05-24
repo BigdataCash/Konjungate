@@ -17,7 +17,7 @@
 #include <boost/foreach.hpp>
 
 CAmount CharityPayment::getCharityPaymentAmount(int blockHeight, CAmount blockReward) {
-	 if (blockHeight < 3){
+	 if (blockHeight < 1){
 		 return 0;
 	 }
 	 return blockReward * 0.25;

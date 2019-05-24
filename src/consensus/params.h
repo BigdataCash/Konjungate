@@ -57,7 +57,6 @@ struct Params {
     /** Block height and hash at which BIP34 becomes active */
     int BIP34Height;
     int nCharityPaymentsStartBlock;
-    int nPrivatesendForkBlock;
     uint256 BIP34Hash;
     /**
      * Minimum blocks including miner confirmation of the total of 2016 blocks in a retargetting period,

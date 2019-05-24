@@ -132,7 +132,7 @@ void OptionsModel::Init(bool resetSettings)
     if (!settings.contains("nPrivateSendAmount")) {
         // for migration from old settings
         if (!settings.contains("nAnonymizeKonjungateAmount"))
-            settings.setValue("nPrivateSendAmount", DEFAULT_PRIVATESEND_AMOUNT_NEW);
+            settings.setValue("nPrivateSendAmount", DEFAULT_PRIVATESEND_AMOUNT);
         else
             settings.setValue("nPrivateSendAmount", settings.value("nAnonymizeKonjungateAmount").toInt());
     }

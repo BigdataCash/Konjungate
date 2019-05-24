@@ -21,7 +21,7 @@
 #include <boost/lexical_cast.hpp>
 
 int nPrivateSendRounds = DEFAULT_PRIVATESEND_ROUNDS;
-int nPrivateSendAmount = DEFAULT_PRIVATESEND_AMOUNT_NEW;
+int nPrivateSendAmount = DEFAULT_PRIVATESEND_AMOUNT;
 int nLiquidityProvider = DEFAULT_PRIVATESEND_LIQUIDITY;
 bool fEnablePrivateSend = false;
 bool fPrivateSendMultiSession = DEFAULT_PRIVATESEND_MULTISESSION;

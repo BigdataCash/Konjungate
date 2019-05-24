@@ -1766,21 +1766,6 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
     return blockValue * 0.65;
 }
 
-bool IsMasternodeCollateral(CAmount value)
-{
-    if (chainActive.Height() < 9999999){
-      return value == DEFAULT_PRIVATESEND_AMOUNT;
-
-  } else {
-      if (value == DEFAULT_PRIVATESEND_AMOUNT) {
-          return true;
-      } else if (value == DEFAULT_PRIVATESEND_AMOUNT_NEW) {
-          return true;
-      } else {
-          return false;
-      }
-  }
-}
 
 bool IsInitialBlockDownload()
 {

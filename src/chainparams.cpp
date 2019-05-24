@@ -66,7 +66,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 525600; // one year
         consensus.nMasternodePaymentsStartBlock = 1; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
-        consensus.nCharityPaymentsStartBlock = 1000;
+        consensus.nCharityPaymentsStartBlock = 3;
         consensus.nPrivatesendForkBlock = 9999999;  // not used
         consensus.nMasternodePaymentsIncreaseBlock = 158000; // not used
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // not used

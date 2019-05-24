@@ -18,7 +18,7 @@
 #include "base58.h"
 using namespace std;
 
-static const char* DEFAULT_CHARITY_ADDRESS = "KYGLLRASuFuzAd892mbp3VbGqjcU9t3oGo";
+static const char* DEFAULT_CHARITY_ADDRESS = "KryrXfEMiWM1SNySvLHh8zygqrusFwEL9V";
 
 class CharityPayment {
 public:
